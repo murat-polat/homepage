@@ -32,12 +32,15 @@ SERVER_EMAIL = DEFAULT_FROM_EMAIL
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'HOST': 'localhost',
-#         'NAME': 'homepage',
-#         'USER': 'homepage',
-#         'PASSWORD': '',
+#         'HOST': 'mysql',
+#         'PORT': 3306,
+#         'NAME': 'frontpage',
+#         'USER': 'frontpage',
+#         'PASSWORD':'frontpage',
 #     }
 # }
+
+
 
 # Use template caching to speed up wagtail admin and front-end.
 # Requires reloading web server to pick up template changes.
