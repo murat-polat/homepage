@@ -113,13 +113,30 @@ WSGI_APPLICATION = 'homepage.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+############   DATABESE SECTION ###########
+
+#### DEV Database, for development ########
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+#############################################
+
+#### Production Database for Tutor
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'localhost',
+        'NAME': 'frontpage',
+        'USER': 'frontpage',
+        'PASSWORD':'frontpage',
     }
 }
 
+############ END OF  DATABESE SECTION ###########
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
