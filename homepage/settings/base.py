@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -87,6 +88,8 @@ MIDDLEWARE = [
 
     # Fetch from cache. Must be LAST.
     'wagtailcache.cache.FetchFromCacheMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'homepage.urls'
@@ -113,9 +116,22 @@ WSGI_APPLICATION = 'homepage.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+# CORS_ALLOWED_ORIGINS = [
+#     " zalanger.xyz ",
+#     " studio.zalanger.xyz ",
+#     # "http://localhost:8080",
+#     # "http://127.0.0.1:9000"
+# ]
+
+
+
 ############   DATABESE SECTION ###########
 
 #### DEV Database, for development ########
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -125,7 +141,8 @@ WSGI_APPLICATION = 'homepage.wsgi.application'
 
 #############################################
 
-#### Production Database for Tutor
+#### Production Database for Tutor ##########
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -167,7 +184,7 @@ LANGUAGES = [
     ('en-us', _('English'))
 ]
 
-TIME_ZONE = 'America/New_York'
+TIME_ZONE = 'Europe/Oslo'
 
 USE_I18N = True
 
