@@ -1,0 +1,3 @@
+[submodule "homepage/homepage/frontend-app-authn"]
+	path = homepage/homepage/frontend-app-authn
+	url = https://github.com/edx/frontend-app-authn
