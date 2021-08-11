@@ -4,7 +4,7 @@
 ### Editors
 #######################################
 
-
+node_modules
 ### Emacs ###
 
 # -*- mode: gitignore; -*-
