@@ -132,27 +132,27 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 #### DEV Database, for development ########
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 #############################################
 
 #### Production Database for Tutor ##########
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'mysql',
-        'PORT': 3306,
-        'NAME': 'frontpage',
-        'USER': 'frontpage',
-        'PASSWORD':'frontpage',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'HOST': 'mysql',
+#         'PORT': 3306,
+#         'NAME': 'frontpage',
+#         'USER': 'frontpage',
+#         'PASSWORD':'frontpage',
+#     }
+# }
 
 ############ END OF  DATABESE SECTION ###########
 
